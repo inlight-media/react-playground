@@ -17,6 +17,9 @@ function buildTodoItems() {
   var onRemove = props.onRemove;
   return _.map(todos, function mapTodos(todo) {
     return (
+      // the spread syntax (...obj) allows us to apply
+      // all the props of the object as properties
+      // to the Component or element
       <TodoItem {...todo}
 	key={todo.id}
 	onCheckToggle={onCheckToggle}

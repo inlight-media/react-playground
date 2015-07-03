@@ -6,11 +6,13 @@ var _ = require('lodash');
 var React = require('react');
 var TodoAdd = require('./todo-add');
 var TodoList = require('./todo-list');
+var Button = require('../shared/button');
 
 var Todo = React.createClass({
   add: add,
   todoCount: todoCount,
   toggleChecked: toggleChecked,
+  setFilter: setFilter,
   getInitialState: getInitialState,
   render: render
 });
@@ -42,21 +44,36 @@ function todoCount() {
   return this.state.todos.length || 0;
 }
 
+function setFilter(filter) {
+  this.setState({
+    filter: filter
+  });
+}
+
 function getInitialState() {
   return {
-    todos: []
+    todos: [],
+    filter: undefined
   }
 }
 
 function render() {
-  var todos = this.state.todos;
+  var state = this.state;
+  var filter = state.filter;
+  var todos = state.todos;
+  var filteredTodos = _.isBoolean(filter)
+    ? _.filter(todos, { checked: filter })
+    : todos;
   return (
     <div>
       <h1>Todos</h1>
       <TodoAdd onTodoSubmit={this.add} />
-      <TodoList todos={todos} onCheckToggle={this.toggleChecked} />
+      <TodoList todos={filteredTodos} onCheckToggle={this.toggleChecked} />
       <footer>
 	{this.todoCount()} Todos
+	<Button handler={this.setFilter.bind(null, '')}>All</Button>
+	<Button handler={this.setFilter.bind(null, false)}>Active</Button>
+	<Button handler={this.setFilter.bind(null, true)}>Completed</Button>
       </footer>
 
     </div>

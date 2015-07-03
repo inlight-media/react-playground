@@ -3,6 +3,7 @@
 */
 
 var React = require('react');
+var Button = require('../shared/button');
 
 var TodoItem = React.createClass({
   toggleChecked: toggleChecked,
@@ -19,6 +20,7 @@ function toggleChecked() {
 
 function render() {
   var props = this.props;
+  var id = props.id;
   var checked = props.checked;
   var text = props.text;
   var textStyle = {
@@ -29,6 +31,7 @@ function render() {
     <div style={{ cursor: 'pointer' }}>
       <input type="checkbox" checked={checked} onChange={this.toggleChecked} />
       <span style={textStyle} onClick={this.toggleChecked}>{text}</span>
+      <Button handler={props.onRemove.bind(null, id)}>&times;</Button>
     </div>
   );
 }

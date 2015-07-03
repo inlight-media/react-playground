@@ -10,6 +10,7 @@ var Button = require('../shared/button');
 
 var Todo = React.createClass({
   add: add,
+  remove: remove,
   todoCount: todoCount,
   toggleChecked: toggleChecked,
   setFilter: setFilter,
@@ -28,6 +29,15 @@ function add(todo) {
   todos = todos.concat([newTodo]);
   this.setState({
     todos: todos
+  });
+}
+
+function remove(id) {
+  console.log('Todo :: remove', { id: id });
+  var todos = this.state.todos;
+  var newTodos = _.reject(todos, { id: id });
+  this.setState({
+    todos: newTodos
   });
 }
 
@@ -68,7 +78,7 @@ function render() {
     <div>
       <h1>Todos</h1>
       <TodoAdd onTodoSubmit={this.add} />
-      <TodoList todos={filteredTodos} onCheckToggle={this.toggleChecked} />
+      <TodoList todos={filteredTodos} onCheckToggle={this.toggleChecked} onRemove={this.remove} />
       <footer>
 	{this.todoCount()} Todos
 	<Button handler={this.setFilter.bind(null, '')}>All</Button>

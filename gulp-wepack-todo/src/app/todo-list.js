@@ -14,9 +14,10 @@ function buildTodoItems() {
   var props = this.props;
   var todos = props.todos;
   var onCheckToggle = props.onCheckToggle;
+  var onRemove = props.onRemove;
   return _.map(todos, function mapTodos(todo) {
     return (
-      <TodoItem {...todo} key={todo.id} onCheckToggle={onCheckToggle} />
+      <TodoItem {...todo} key={todo.id} onCheckToggle={onCheckToggle} onRemove={onRemove} />
     )
   });
 }

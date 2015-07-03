@@ -78,7 +78,10 @@ function render() {
     <div>
       <h1>Todos</h1>
       <TodoAdd onTodoSubmit={this.add} />
-      <TodoList todos={filteredTodos} onCheckToggle={this.toggleChecked} onRemove={this.remove} />
+      <TodoList
+	todos={filteredTodos}
+	onCheckToggle={this.toggleChecked}
+	onRemove={this.remove} />
       <footer>
 	{this.todoCount()} Todos
 	<Button handler={this.setFilter.bind(null, '')}>All</Button>

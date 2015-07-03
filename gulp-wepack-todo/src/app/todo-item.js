@@ -29,7 +29,10 @@ function render() {
 
   return (
     <div style={{ cursor: 'pointer' }}>
-      <input type="checkbox" checked={checked} onChange={this.toggleChecked} />
+      <input
+	type="checkbox"
+	checked={checked}
+	onChange={this.toggleChecked} />
       <span style={textStyle} onClick={this.toggleChecked}>{text}</span>
       <Button handler={props.onRemove.bind(null, id)}>&times;</Button>
     </div>

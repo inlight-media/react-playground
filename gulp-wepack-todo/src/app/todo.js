@@ -5,12 +5,13 @@
 var _ = require('lodash');
 var React = require('react');
 var TodoAdd = require('./todo-add');
-var TodoList = require('./todo-list');
+var TodoItem = require('./todo-item');
 var Button = require('../shared/button');
 
 var Todo = React.createClass({
   add: add,
   remove: remove,
+  buildTodoItems: buildTodoItems,
   todoCount: todoCount,
   toggleChecked: toggleChecked,
   setFilter: setFilter,
@@ -41,6 +42,27 @@ function remove(id) {
   });
 }
 
+function buildTodoItems() {
+  var self = this;
+  var state = self.state;
+  var todos = state.todos;
+  var filter = state.filter;
+  var filteredTodos = _.isBoolean(filter)
+    ? _.filter(todos, { checked: filter })
+    : todos;
+  return _.map(filteredTodos, function mapTodos(todo) {
+    return (
+      // the spread syntax (...obj) allows us to apply
+      // all the props of the object as properties
+      // to the Component or element
+      <TodoItem {...todo}
+	key={todo.id}
+	onCheckToggle={self.toggleChecked}
+	onRemove={self.remove} />
+    )
+  });
+}
+
 function toggleChecked(id) {
   var todos = this.state.todos;
   var todo = _.find(todos, { id: id });
@@ -68,20 +90,13 @@ function getInitialState() {
 }
 
 function render() {
-  var state = this.state;
-  var filter = state.filter;
-  var todos = state.todos;
-  var filteredTodos = _.isBoolean(filter)
-    ? _.filter(todos, { checked: filter })
-    : todos;
   return (
     <div>
       <h1>Todos</h1>
       <TodoAdd onTodoSubmit={this.add} />
-      <TodoList
-	todos={filteredTodos}
-	onCheckToggle={this.toggleChecked}
-	onRemove={this.remove} />
+      <div className="todo-list">
+	{this.buildTodoItems()}
+      </div>
       <footer>
 	{this.todoCount()} Todos
 	<Button handler={this.setFilter.bind(null, '')}>All</Button>

@@ -31,7 +31,7 @@ function submit(e) {
 function render() {
   return (
     <form onSubmit={this.submit}>
-      <input type="text" placeholder="Submit a Todo" ref="text" />
+      <input type="text" placeholder="Submit a Todo" ref="text" autoFocus={true} />
     </form>
   );
 }

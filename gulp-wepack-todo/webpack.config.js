@@ -14,53 +14,53 @@ var vars = require('postcss-simple-vars');
 // be applied in the 'loaders' config.
 
 module.exports = {
-  // cache: true,
-  entry: [
-    'webpack-dev-server/client?http://localhost:8080', // WebpackDevServer host and port
-    'webpack/hot/only-dev-server',
-    './src/app/index.js'
-  ],
-  output: {
-    filename: 'index.js',
-    path: path.resolve('./dist')
-  },
-  module: {
-    // Loaders are transformations that can be applied to
-    // certain files using a regex pattern. It replaces
-    // the need for gulp task. Here we're using ones for
-    // jsx compilation (see React docs) and to faciliate
-    // are react-hot-loader for live reloading
-    loaders: [
-      {
-	test: /\.css$/,
-	loader: ExtractTextPlugin.extract(
-	  'style-loader',
-	  'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
-	)
-      },
-      {
-	include: path.join(__dirname, 'src'),
-	test: /\.js$/,
-	loader: 'react-hot!jsx'
-      }
-    ]
-  },
-  postcss: [
-    vars({
-      variables: function () {
-	return require('./src/config/colors');
-      }
-    })
-  ],
-  resolve: {
-    modulesDirectories: ['node_modules', 'components']
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Todo App'
-    }),
-    new ExtractTextPlugin('style.css', { allChunks: true }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
-  ]
+	// cache: true,
+	entry: [
+		'webpack-dev-server/client?http://localhost:8080', // WebpackDevServer host and port
+		'webpack/hot/only-dev-server',
+		'./src/app/index.js'
+	],
+	output: {
+		filename: 'index.js',
+		path: path.resolve('./dist')
+	},
+	module: {
+		// Loaders are transformations that can be applied to
+		// certain files using a regex pattern. It replaces
+		// the need for gulp task. Here we're using ones for
+		// jsx compilation (see React docs) and to faciliate
+		// are react-hot-loader for live reloading
+		loaders: [
+			{
+				test: /\.css$/,
+				loader: ExtractTextPlugin.extract(
+					'style-loader',
+					'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
+				)
+			},
+			{
+				include: path.join(__dirname, 'src'),
+				test: /\.js$/,
+				loader: 'react-hot!jsx'
+			}
+		]
+	},
+	postcss: [
+		vars({
+			variables: function () {
+				return require('./src/config/colors');
+			}
+		})
+	],
+	resolve: {
+		modulesDirectories: ['node_modules', 'components']
+	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			title: 'Todo App'
+		}),
+		new ExtractTextPlugin('style.css', { allChunks: true }),
+		new webpack.HotModuleReplacementPlugin(),
+		new webpack.NoErrorsPlugin()
+	]
 };

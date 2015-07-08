@@ -4,6 +4,7 @@
 
 var React = require('react');
 var Button = require('../../../shared/button');
+var styles = require('./style.css');
 
 var TodoItem = React.createClass({
   toggleChecked: toggleChecked,
@@ -34,7 +35,9 @@ function handleSetEditing() {
   // the dom el does not have { display: 'none }. So we wait
   // for the component to re-render and then set the foucs
   handler(id, function cb() {
-    React.findDOMNode(self.refs.newText).focus();
+    var el = React.findDOMNode(self.refs.newText);
+    el.focus();
+    el.select();
   });
 }
 
@@ -88,14 +91,14 @@ function render() {
   };
 
   return (
-    <div style={{ cursor: 'pointer' }}>
+    <div className={styles.todo}>
       <input
 	type="checkbox"
 	checked={checked}
 	onChange={this.toggleChecked} />
-      <span style={textStyle} onClick={this.handleSetEditing}>{text}</span>
-      <input style={inputStyle} type="text" ref="newText" onChange={this.handleEditChange} onKeyDown={this.handleEdit} value={state.editText} autoFocus={true} />
-      <Button handler={props.onRemove.bind(null, id)}>&times;</Button>
+      <span className={styles.text} style={textStyle} onClick={this.handleSetEditing}>{text}</span>
+      <input className={styles.text} style={inputStyle} type="text" ref="newText" onChange={this.handleEditChange} onKeyDown={this.handleEdit} value={state.editText} autoFocus={true} />
+      <Button theme="danger" handler={props.onRemove.bind(null, id)}>&times;</Button>
     </div>
   );
 }

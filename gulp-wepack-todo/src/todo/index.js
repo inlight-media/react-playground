@@ -141,9 +141,9 @@ function render() {
       </div>
       <footer>
 	{this.todoCount()} Todos
-	<Button theme="primary" handler={this.setFilter.bind(null, '')}>All</Button>
-	<Button theme="success" handler={this.setFilter.bind(null, false)}>Active</Button>
-	<Button theme="danger" handler={this.setFilter.bind(null, true)}>Completed</Button>
+	<Button theme="success" handler={this.setFilter.bind(null, '')}>All</Button>
+	<Button handler={this.setFilter.bind(null, false)}>Active</Button>
+	<Button handler={this.setFilter.bind(null, true)}>Completed</Button>
       </footer>
 
     </div>

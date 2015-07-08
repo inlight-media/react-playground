@@ -1,0 +1,10 @@
+.todo {
+	composes: default from "../../../shared/css/typography.css";
+	cursor: pointer;
+	margin: 1em 0;
+}
+
+.text {
+	display: inline-block;
+	width: 400px;
+}

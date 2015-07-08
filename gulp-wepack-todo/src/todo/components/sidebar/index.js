@@ -19,7 +19,7 @@ var items = [
 
 export default class Sidebar extends React.Component {
 	buildItems(items) {
-		return items.map(item => ( <Item href={ item.link }>{ item.label }</Item> ));
+		return items.map(item => ( <Item link={ item.link }>{ item.label }</Item> ));
 	}
 
 	render() {

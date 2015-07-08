@@ -135,7 +135,7 @@ function getInitialState() {
 function render() {
   return (
     <div className={styles.wrapper}>
-      <Sidebar></Sidebar>
+      <Sidebar />
       <h1 className={styles.title}>Todos</h1>
       <TodoAdd onTodoSubmit={this.add} />
       <div className="todo-list">

@@ -1,6 +1,3 @@
-:import("../shared/css/colors.css") {
-	$greyLight: greyLight
-}
 
 .title {
 	composes: heading from "../shared/css/typography.css";

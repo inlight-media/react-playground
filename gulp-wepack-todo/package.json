@@ -22,6 +22,7 @@
     "jsx-loader": "^0.13.2",
     "lodash": "^3.10.0",
     "postcss-loader": "^0.5.1",
+    "postcss-simple-vars": "^0.3.0",
     "react": "^0.13.3",
     "style-loader": "^0.12.3"
   }

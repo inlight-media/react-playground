@@ -1,11 +1,3 @@
-/*
- * Note: These styles should be generic button styles
- * that could be used in any app or context. Theming of
- * the buttons should happen via props. Imgaine the 
- * styling of this being your idea of what a native html
- * button should look like at its base state
- */
-
 .default {
 	background-color: 'light-grey';
 	border: 0;
@@ -23,4 +15,45 @@
 
 .default:active {
 	background-color: black;
+}
+
+.primary {
+	composes: default;
+	background-color: $brandColor;
+	color: white;
+}
+
+.primary:hover {
+	background-color: $blueDark;
+}
+
+.success {
+	composes: default;
+	background-color: $green;
+	color: white;
+}
+
+.success:hover {
+	background-color: $greenDark;
+}
+
+.info {
+	composes: default;
+	background-color: $blueLight;
+	color: white;
+}
+
+.info:hover {
+	/* look into tool for color transformations */
+	background-color: $blue;
+}
+
+.danger {
+	composes: default;
+	background-color: $red;
+	color: white;
+}
+
+.danger:hover {
+	background-color: $redDark;
 }

@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var vars = require('postcss-simple-vars');
 
 // React Hot Reloading
 // ===================
@@ -42,6 +43,13 @@ module.exports = {
       }
     ]
   },
+  postcss: [
+    vars({
+      variables: function () {
+	return require('./src/config/colors');
+      }
+    })
+  ],
   plugins: [
     new ExtractTextPlugin('style.css', { allChunks: true }),
     new webpack.HotModuleReplacementPlugin(),

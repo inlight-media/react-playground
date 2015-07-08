@@ -6,6 +6,8 @@
  * define things such as a global line-height here
  */
 
+$brandColor: $blue;
+
 .app {
 	line-height: 1.5em;
 	font-size: 120%;

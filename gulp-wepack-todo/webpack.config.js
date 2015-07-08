@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var vars = require('postcss-simple-vars');
 
 // React Hot Reloading
@@ -20,7 +21,7 @@ module.exports = {
     './src/app/index.js'
   ],
   output: {
-    filename: 'bundle.js',
+    filename: 'index.js',
     path: path.resolve('./dist')
   },
   module: {
@@ -55,6 +56,9 @@ module.exports = {
     modulesDirectories: ['node_modules', 'components']
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Todo App'
+    }),
     new ExtractTextPlugin('style.css', { allChunks: true }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()

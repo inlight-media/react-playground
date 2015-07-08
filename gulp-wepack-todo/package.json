@@ -9,12 +9,13 @@
     "clean": "rm -rf dist",
     "build": "npm run clean && webpack",
     "deploy": "npm run build && gh-pages -d dist -m \"Updates --skip-ci\""
-  }
-  ,"author": "",
+  },
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-util": "^3.0.6",
+    "html-webpack-plugin": "^1.5.2",
     "node-libs-browser": "^0.5.2",
     "react-hot-loader": "^1.2.7",
     "webpack": "^1.10.0",

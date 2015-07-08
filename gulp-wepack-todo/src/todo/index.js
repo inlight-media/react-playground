@@ -6,6 +6,7 @@ var _ = require('lodash');
 var React = require('react');
 var TodoAdd = require('./components/todo-add');
 var TodoItem = require('./components/todo-item');
+var Sidebar = require('./components/sidebar');
 var Button = require('../shared/button');
 var styles = require('./todo.css');
 
@@ -134,6 +135,7 @@ function getInitialState() {
 function render() {
   return (
     <div className={styles.wrapper}>
+      <Sidebar></Sidebar>
       <h1 className={styles.title}>Todos</h1>
       <TodoAdd onTodoSubmit={this.add} />
       <div className="todo-list">

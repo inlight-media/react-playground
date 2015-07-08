@@ -13,14 +13,15 @@ var vars = require('postcss-simple-vars');
 // be applied in the 'loaders' config.
 
 module.exports = {
-  cache: true,
+  // cache: true,
   entry: [
-    'webpack-dev-server/client?http://localhost:5000', // WebpackDevServer host and port
+    'webpack-dev-server/client?http://localhost:8080', // WebpackDevServer host and port
     'webpack/hot/only-dev-server',
     './src/app/index.js'
   ],
   output: {
-    path: path.join(__dirname, './dist')
+    filename: 'bundle.js',
+    path: path.resolve('./dist')
   },
   module: {
     // Loaders are transformations that can be applied to
@@ -50,6 +51,9 @@ module.exports = {
       }
     })
   ],
+  resolve: {
+    modulesDirectories: ['node_modules', 'components']
+  },
   plugins: [
     new ExtractTextPlugin('style.css', { allChunks: true }),
     new webpack.HotModuleReplacementPlugin(),

@@ -3,6 +3,7 @@
 */
 
 var React = require('react');
+var styles = require('./style.css');
 
 var TodoAdd = React.createClass({
   submit: submit,
@@ -31,7 +32,7 @@ function submit(e) {
 function render() {
   return (
     <form onSubmit={this.submit}>
-      <input type="text" placeholder="Submit a Todo" ref="text" autoFocus={true} />
+      <input type="text" className={styles.box} placeholder="Submit a Todo" ref="text" autoFocus={true} />
     </form>
   );
 }

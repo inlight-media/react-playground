@@ -1,0 +1,12 @@
+/*
+ * Use this file to define anything that is useful to cascade down
+ * the entire application structure. Cascading shouldn't be overused
+ * in this context, as the whole point of modular CSS is that everything
+ * is more obvious, with not vague relations. But it makes sense to
+ * define things such as a global line-height here
+ */
+
+.app {
+	line-height: 1.5em;
+	font-size: 120%;
+}

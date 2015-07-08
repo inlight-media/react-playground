@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 // React Hot Reloading
 // ===================
@@ -27,7 +28,13 @@ module.exports = {
     // jsx compilation (see React docs) and to faciliate
     // are react-hot-loader for live reloading
     loaders: [
-      // { test: /\.css$/, loader: 'style!css' },
+      {
+	test: /\.css$/,
+	loader: ExtractTextPlugin.extract(
+	  'style-loader',
+	  'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
+	)
+      },
       {
 	include: path.join(__dirname, 'src'),
 	test: /\.js$/,
@@ -36,6 +43,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new ExtractTextPlugin('style.css', { allChunks: true }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ]

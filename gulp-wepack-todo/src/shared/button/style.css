@@ -1,0 +1,26 @@
+/*
+ * Note: These styles should be generic button styles
+ * that could be used in any app or context. Theming of
+ * the buttons should happen via props. Imgaine the 
+ * styling of this being your idea of what a native html
+ * button should look like at its base state
+ */
+
+.default {
+	background-color: 'light-grey';
+	border: 0;
+	cursor: pointer;
+	margin: 0 .25em;
+	padding: .5em 1em;
+	font-size: 16px;
+}
+
+/* look at postCSS plugin for nesting this */
+.default:hover {
+	background-color: grey;
+	color: white;
+}
+
+.default:active {
+	background-color: black;
+}

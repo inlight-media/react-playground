@@ -3,7 +3,7 @@
 */
 
 var React = require('react');
-var Button = require('../shared/button');
+var Button = require('../../../shared/button');
 
 var TodoItem = React.createClass({
   toggleChecked: toggleChecked,

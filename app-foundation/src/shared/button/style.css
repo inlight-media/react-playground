@@ -1,0 +1,59 @@
+.default {
+	background-color: 'light-grey';
+	border: 0;
+	cursor: pointer;
+	margin: 0 .25em;
+	padding: .5em 1em;
+	font-size: 16px;
+}
+
+/* look at postCSS plugin for nesting this */
+.default:hover {
+	background-color: grey;
+	color: white;
+}
+
+.default:active {
+	background-color: black;
+}
+
+.primary {
+	composes: default;
+	background-color: $brandColor;
+	color: white;
+}
+
+.primary:hover {
+	background-color: $blueDark;
+}
+
+.success {
+	composes: default;
+	background-color: $green;
+	color: white;
+}
+
+.success:hover {
+	background-color: $greenDark;
+}
+
+.info {
+	composes: default;
+	background-color: $blueLight;
+	color: white;
+}
+
+.info:hover {
+	/* look into tool for color transformations */
+	background-color: $blue;
+}
+
+.danger {
+	composes: default;
+	background-color: $red;
+	color: white;
+}
+
+.danger:hover {
+	background-color: $redDark;
+}

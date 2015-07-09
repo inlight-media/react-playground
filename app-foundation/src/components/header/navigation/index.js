@@ -24,7 +24,7 @@ export default class Navigation extends Component {
 
 	render() {
 		return (
-			<nav className={ styles.container }>
+			<nav className={ styles.container } role="navigation">
 				<ul>
 					{ this.buildItems(items) }
 				</ul>

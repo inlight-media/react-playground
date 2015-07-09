@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styles from './style.css';
 import Item from './item';
 
@@ -17,7 +17,7 @@ var items = [
 	}
 ];
 
-export default class Sidebar extends React.Component {
+export default class Sidebar extends Component {
 	buildItems(items) {
 		return items.map(item => ( <Item link={ item.link }>{ item.label }</Item> ));
 	}

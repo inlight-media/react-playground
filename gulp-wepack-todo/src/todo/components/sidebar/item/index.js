@@ -1,7 +1,7 @@
-import React from 'react'
-import styles from './style.css'
+import React, { Component } from 'react';
+import styles from './style.css';
 
-export default class Item extends React.Component {
+export default class Item extends Component {
 	render() {
 		return (
 			<li className={ styles.container }>

@@ -6,6 +6,8 @@
  * define things such as a global line-height here
  */
 
+@import '../shared/css/reset.css';
+
 $brandColor: $blue;
 
 .app {

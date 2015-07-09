@@ -1,7 +1,0 @@
-.default {
-	font-family: Helevetica, sans-serif;
-}
-
-.heading {
-	composes: default;
-}

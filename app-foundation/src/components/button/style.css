@@ -1,4 +1,4 @@
-.default {
+.ele {
 	background-color: 'light-grey';
 	border: 0;
 	cursor: pointer;
@@ -18,7 +18,6 @@
 }
 
 .primary {
-	composes: default;
 	background-color: $brandColor;
 	color: white;
 }
@@ -28,7 +27,6 @@
 }
 
 .success {
-	composes: default;
 	background-color: $green;
 	color: white;
 }
@@ -38,7 +36,6 @@
 }
 
 .info {
-	composes: default;
 	background-color: $blueLight;
 	color: white;
 }
@@ -49,11 +46,14 @@
 }
 
 .danger {
-	composes: default;
 	background-color: $red;
 	color: white;
 }
 
 .danger:hover {
 	background-color: $redDark;
+}
+
+.large {
+	padding: 1.5em 3em;
 }

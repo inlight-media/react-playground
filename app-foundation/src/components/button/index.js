@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
 import styles from './style.css';
+import classNames from 'classnames';
 
 export default class Button extends Component {
 	render() {
-		var theme = this.props.theme || 'default';
+		var classes = classNames(
+			styles.ele,
+			this.props.theme ? styles[this.props.theme] : '',
+			this.props.size ? styles[this.props.size] : ''
+		);
 
 		return (
-			<button type="button" className={styles[theme]} onClick={this.props.handler}>
+			<a href={ this.props.href } className={ classes } onClick={ this.props.handler } role="button">
 				{this.props.children}
-			</button>
+			</a>
 		);
 	}
 };

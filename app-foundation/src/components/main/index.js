@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './style.css';
 import List from '../list';
+import Dropdown from '../dropdown';
 
 var items = [
 	{
@@ -44,11 +45,25 @@ var items = [
 	}
 ];
 
+var options = [
+	{
+		value: 'one',
+		label: 'One'
+	},
+	{
+		value: 'two',
+		label: 'Two'
+	},
+];
+
+var defaultOption = 'two';
+
 export default class Main extends Component {
 	render() {
 		return (
 			<div className={ styles.container }>
 				<List items={ items } />
+				<Dropdown options={ options } value={ defaultOption } />
 			</div>
 		);
 	}

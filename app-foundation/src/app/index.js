@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Header from '../components/header';
-import Main from '../components/main';
+import Home from '../views/home';
 
 import styles from './style.css';
 import reset from './reset.css';
@@ -9,6 +9,6 @@ import reset from './reset.css';
 React.render(
 	<div className={styles.app}>
 		<Header />
-		<Main />
+		<Home />
 	</div>
 	, document.body);

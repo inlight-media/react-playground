@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styles from './style.css';
-import List from '../list';
-import Dropdown from '../dropdown';
+import List from '../../components/list';
+import Dropdown from '../../components/dropdown';
 
 var items = [
 	{
@@ -58,7 +58,7 @@ var options = [
 
 var defaultOption = 'two';
 
-export default class Main extends Component {
+export default class Home extends Component {
 	render() {
 		return (
 			<div className={ styles.container }>

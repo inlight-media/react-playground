@@ -1,21 +1,7 @@
 import React, { Component } from 'react';
 import styles from './style.css';
 import Item from './item';
-
-var items = [
-	{
-		link:"http://www.google.com",
-		label: "Google"
-	},
-	{
-		link:"http://www.bing.com",
-		label: "Bing",
-	},
-	{
-		link:"http://www.ask.com",
-		label: "Ask"
-	}
-];
+import ButtonSet from '../button-set';
 
 export default class List extends Component {
 	buildItems(items) {
@@ -23,6 +9,7 @@ export default class List extends Component {
 			return (
 				<Item link={ item.link }>
 					{ item.label }
+					<ButtonSet buttons={ item.buttons } />
 				</Item>
 			);
 		});
@@ -31,7 +18,7 @@ export default class List extends Component {
 	render() {
 		return (
 			<ul className={ styles.container }>
-				{ this.buildItems(items) }
+				{ this.buildItems(this.props.items) }
 			</ul>
 		);
 	}

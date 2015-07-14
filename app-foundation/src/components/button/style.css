@@ -8,13 +8,9 @@
 }
 
 /* look at postCSS plugin for nesting this */
-.default:hover {
+.ele:hover {
 	background-color: grey;
 	color: white;
-}
-
-.default:active {
-	background-color: black;
 }
 
 .primary {
@@ -55,5 +51,5 @@
 }
 
 .large {
-	padding: 1.5em 3em;
+	padding: 1em 2em;
 }

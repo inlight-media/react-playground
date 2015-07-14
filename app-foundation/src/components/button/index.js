@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import styles from './style.css';
 import classNames from 'classnames';
+import styles from './style.css';
 
 export default class Button extends Component {
 	render() {
 		var classes = classNames(
 			styles.ele,
 			this.props.theme ? styles[this.props.theme] : '',
-			this.props.size ? styles[this.props.size] : ''
+			this.props.size ? styles[this.props.size] : '',
+			this.props.className ? this.props.className : ''
 		);
 
 		return (

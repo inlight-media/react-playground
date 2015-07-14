@@ -6,7 +6,7 @@ export default class ButtonSet extends Component {
 	buildButtons(buttons) {
 		return buttons.map(function(button) {
 			return (
-				<Button theme={ button.theme } href={ button.href } size={ button.size }>{ button.label }</Button>
+				<Button theme={ button.theme } href={ button.href } size={ button.size } className={ styles.button }>{ button.label }</Button>
 			)
 		});
 	}

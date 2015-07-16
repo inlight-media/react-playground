@@ -18,7 +18,7 @@ module.exports = {
 	entry: [
 		'webpack-dev-server/client?http://localhost:8080', // WebpackDevServer host and port
 		'webpack/hot/only-dev-server',
-		'./src/app/index.js'
+		'./src/index.js'
 	],
 	output: {
 		filename: 'index.js',
@@ -53,7 +53,7 @@ module.exports = {
 		})
 	],
 	resolve: {
-		modulesDirectories: ['node_modules', 'components']
+		modulesDirectories: ['node_modules', 'components', 'views']
 	},
 	plugins: [
 		new HtmlWebpackPlugin({

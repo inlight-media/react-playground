@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import styles from './style.css';
 
 // @TODO: Resolve module directories in webpack config so we don't have to keep backtracking to components.
-import List from '../../components/list';
-import Dropdown from '../../components/dropdown';
+import List from 'list';
+import Dropdown from 'dropdown';
 
 var items = [
 	{
@@ -60,7 +60,7 @@ var options = [
 
 var defaultOption = 'two';
 
-export default class Home extends Component {
+export default class LocationList extends Component {
 	render() {
 		return (
 			<div className={ styles.container }>

@@ -9,5 +9,6 @@ module.exports = {
 	red: '#D9534F',
 	redDark: '#C9302C',
 	green: '#5CB85C',
-	greenDark: '#449D44'
+	greenDark: '#449D44',
+	brandColor: '#22CCFC'
 };

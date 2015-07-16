@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from './style.css';
-import Button from '../button';
+import Button from 'button';
 
 export default class ButtonSet extends Component {
 	buildButtons(buttons) {

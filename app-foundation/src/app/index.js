@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import styles from './style.css';
 import reset from './reset.css';
+import styles from './style.css';
 
 import Header from 'header';
 import Main from 'main';

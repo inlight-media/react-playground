@@ -23,7 +23,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-// HTML5 display-role reset for older browsers
+/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -40,17 +40,15 @@ ul {
 
 blockquote,
 q {
-
-}
 	quotes: none;
+}
 
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: '';
-	content: none;
+blockquote, q {
+	&:before, &:after {
+		content: '';
+		content: none;
+	}
 }
 
 table  {
@@ -58,7 +56,7 @@ table  {
 	border-spacing: 0;
 }
 
-// Box Sizing - http://www.paulirish.com/2012/box-sizing-border-box-ftw
+/* Box Sizing - http://www.paulirish.com/2012/box-sizing-border-box-ftw */
 html {
 	box-sizing: border-box;
 }
@@ -69,18 +67,18 @@ html {
 	box-sizing: inherit;
 }
 
-// Responsive Images
+/* Responsive Images */
 img {
 	max-width: 100%;
 }
 
-// For various 100% height elements.
+/* For various 100% height elements. */
 html,
 body {
 	height: 100%;
 }
 
-// Remove tap colour on phones - http://phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html
+/* Remove tap colour on phones - http://phonegap-tips.com/articles/essential-phonegap-css-webkit-tap-highlight-color.html */
 a {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	-webkit-tap-highlight-color: transparent;

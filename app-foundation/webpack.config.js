@@ -43,7 +43,7 @@ module.exports = {
 			{
 				include: path.join(__dirname, 'src'),
 				test: /\.js$/,
-				loader: 'babel' // @Todo: Add react-hot back in here, along with Babel.
+				loader: 'react-hot!babel'
 			}
 		]
 	},

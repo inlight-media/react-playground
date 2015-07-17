@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 import styles from './style.css';
 
 export default class Item extends Component {
@@ -15,22 +16,23 @@ export default class Item extends Component {
 };
 
 function render() {
-	console.log('this', this);
-	var isActive = this.state.isActive;
-	console.log('isActive', isActive);
+	var classes = classNames(
+		styles.item,
+		this.state.isActive ? styles.active : ''
+	);
+
 	return (
-		<li className={ styles.container }>
-			<a href={ this.props.link } onClick={ this.handleClick } className={ isActive ? 'active' : '' }>{ this.props.children }</a>
+		<li className={ classes }>
+			<a href={ this.props.link } onClick={ this.handleClick } className={ styles.anchor }>{ this.props.children }</a>
 		</li>
 	);
 }
 
 function handleClick() {
 	event.preventDefault();
-	console.log('event', event);
-	console.log('this.state', this.state);
 
 	this.setState({
 		isActive: true
 	});
 }
+

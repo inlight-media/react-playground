@@ -4,6 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var vars = require('postcss-simple-vars');
 var nested = require('postcss-nested');
+var _ = require('lodash');
 
 // React Hot Reloading
 // ===================
@@ -49,9 +50,13 @@ module.exports = {
 	postcss: [
 		vars({
 			variables: function () {
-				return require('./src/config/colors');
+				var colors = require('./src/config/colors');
+				var theme = require('./src/config/theme');
+				var nav = require('./src/config/nav');
+
+				return _.assign(colors, theme, nav);
 			}
-		})
+		}),
 		nested()
 	],
 	resolve: {

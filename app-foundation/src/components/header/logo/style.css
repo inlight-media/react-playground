@@ -1,6 +1,20 @@
 .container {
-	width: 50px;
-	height: 50px;
 	float: left;
-	margin-right: 15px;
+	width: $navHeight;
+	height: $navHeight;
+	text-align: center;
+	border-right: 1px solid $navLines;
+	line-height: $navHeight;
+	a {
+		display: inline-block;
+		font-size: 32px;
+		color: $navTextHighlight;
+
+		.icon, img {
+			line-height: $navHeight;
+			vertical-align: middle;
+			color: $blueLight;
+		}
+	}
 }
+

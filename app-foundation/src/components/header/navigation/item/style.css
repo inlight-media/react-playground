@@ -1,11 +1,34 @@
-.container {
-	background: black;
-	color: white;
-	width: 100px;
-	display: inline-block;
-	margin-right: 10px;
+.item {
+	float: left;
+	position: relative;
+	display: block;
+	height: $navHeight;
+	background: $nav;
+
+	.dropdown a.btn {
+		line-height: $navHeight;
+		height: $navHeight;
+	}
 }
 
-.container a {
-	color: white;
+.anchor {
+	float: left;
+	line-height: $navHeight;
+	height: $navHeight;
+	font-size: 12px;
+	font-weight: 400;
+	color: $navText;
+	padding: 0 $navPadding;
+
+	&:hover {
+		background: $navHover;
+	}
+}
+
+
+.active {
+	a {
+		box-shadow: inset 0px -1px 0px 0px $navTextHighlight;
+		color: $navTextHighlight;
+	}
 }

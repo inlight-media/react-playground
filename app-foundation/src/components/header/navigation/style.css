@@ -1,5 +1,29 @@
 .container {
-	background: yellow;
-	height: 100px;
-	width: 50%;
+	float: left;
+
+	&.navbar-right {
+		float: right;
+
+		> ul {
+			> li {
+				border-left: 1px solid $navLines;
+
+				&.help {
+					line-height: $navHeight;
+
+					a {
+						height: $navHeight;
+						font-size: 24px;
+						color: $greyMedium;
+						padding: 0 15px;
+
+						.icon {
+							line-height: $navHeight;
+						}
+					}
+
+				}
+			}
+		}
+	}
 }

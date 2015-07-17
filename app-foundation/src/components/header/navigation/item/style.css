@@ -4,11 +4,6 @@
 	display: block;
 	height: $navHeight;
 	background: $nav;
-
-	.dropdown a.btn {
-		line-height: $navHeight;
-		height: $navHeight;
-	}
 }
 
 .anchor {
@@ -27,7 +22,7 @@
 
 
 .active {
-	a {
+	.anchor {
 		box-shadow: inset 0px -1px 0px 0px $navTextHighlight;
 		color: $navTextHighlight;
 	}

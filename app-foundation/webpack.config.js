@@ -4,6 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var vars = require('postcss-simple-vars');
 var nested = require('postcss-nested');
+var autoprefixer = require('autoprefixer');
 var _ = require('lodash');
 
 // React Hot Reloading
@@ -57,7 +58,8 @@ module.exports = {
 				return _.assign(colors, theme, nav);
 			}
 		}),
-		nested()
+		nested(),
+		autoprefixer()
 	],
 	resolve: {
 		modulesDirectories: ['node_modules', 'components', 'views']

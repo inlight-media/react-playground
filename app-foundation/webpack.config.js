@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var vars = require('postcss-simple-vars');
+var nested = require('postcss-nested');
 
 // React Hot Reloading
 // ===================
@@ -51,6 +52,7 @@ module.exports = {
 				return require('./src/config/colors');
 			}
 		})
+		nested()
 	],
 	resolve: {
 		modulesDirectories: ['node_modules', 'components', 'views']

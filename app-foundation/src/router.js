@@ -3,7 +3,7 @@ import { Router, Route } from 'react-router';
 import { history } from 'react-router/lib/HashHistory';
 
 // Components
-import App from '../app/'
+import App from './app'
 import NotFound from 'not-found'
 import Zones from 'zones';
 import LocationsList from 'locations/list';

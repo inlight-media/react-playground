@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 import styles from './style.css';
 import Button from 'button';
 
@@ -12,8 +13,13 @@ export default class ButtonSet extends Component {
 	}
 
 	render() {
+		var classes = classNames(
+			styles.container,
+			this.props.className ? this.props.className : ''
+		);
+
 		return (
-			<div className={ styles.container }>
+			<div className={ classes }>
 				{ this.buildButtons(this.props.buttons) }
 			</div>
 		);

@@ -1,54 +1,36 @@
-.ele {
-	background-color: 'light-grey';
-	border: 0;
+.button {
+	display: inline-block;
+	border-radius: 3px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px;
 	cursor: pointer;
-	padding: .5em 1em;
-	font-size: 16px;
-}
-
-/* look at postCSS plugin for nesting this */
-.ele:hover {
-	background-color: grey;
-	color: white;
+	font-weight: 400;
+	font-size: 12px;
+	border: 0 none;
+	transition: 0.3s;
+	outline: none;
 }
 
 .primary {
-	background-color: $brandColor;
-	color: white;
+	background: $primary;
+	color: $white;
 }
 
-.primary:hover {
-	background-color: $blueDark;
+.secondary {
+	background: $greyVeryLight;
+	color: $greyDark;
 }
 
 .success {
-	background-color: $green;
-	color: white;
+	background: $positive;
+	color: $white;
 }
 
-.success:hover {
-	background-color: $greenDark;
-}
-
-.info {
-	background-color: $blueLight;
-	color: white;
-}
-
-.info:hover {
-	/* look into tool for color transformations */
-	background-color: $blue;
-}
-
-.danger {
-	background-color: $red;
-	color: white;
-}
-
-.danger:hover {
-	background-color: $redDark;
-}
-
-.large {
-	padding: 1em 2em;
+.primary,
+.secondary,
+.success {
+	&:hover {
+		opacity: 0.8;
+	}
 }

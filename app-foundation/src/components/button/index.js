@@ -5,7 +5,7 @@ import styles from './style.css';
 export default class Button extends Component {
 	render() {
 		var classes = classNames(
-			styles.ele,
+			styles.button,
 			this.props.theme ? styles[this.props.theme] : '',
 			this.props.size ? styles[this.props.size] : '',
 			this.props.className ? this.props.className : ''

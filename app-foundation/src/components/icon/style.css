@@ -1,0 +1,12 @@
+.icon {
+	font-size: 24px;
+	color: $fontLighter;
+}
+
+.positive {
+	color: $positive;
+}
+
+.neutral {
+	color: $neutral;
+}

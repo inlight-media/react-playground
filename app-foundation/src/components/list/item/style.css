@@ -1,7 +1,43 @@
-.container {
+.item {
 	position: relative;
 	padding: 20px 0 20px 20px;
-	border-bottom: 1px solid grey;
+	border-bottom: 1px solid $greyVeryLight;
 	cursor: pointer;
 	transition: 0.3s;
+
+	&:hover {
+		background: $offWhite;
+
+		.buttonSet {
+			a {
+				background: $greyVeryLight;
+			}
+		}
+	}
+
+}
+
+.title {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 24px;
+}
+
+.description {
+	font-size: 13px;
+	color: $fontLighter;
+	font-weight: 300;
+}
+
+.icon {
+	float: left;
+	margin-right: 15px;
+	/* Temp */
+	background: $greyLight;
+	width: 40px;
+	height: 40px;
+}
+
+.buttonSet {
+	float: right;
 }

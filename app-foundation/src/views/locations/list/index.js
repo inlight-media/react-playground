@@ -8,40 +8,42 @@ import Dropdown from 'dropdown';
 var items = [
 	{
 		link:"http://www.google.com",
-		label: "Google",
+		title: "Google",
+		description: "A great search engine",
 		buttons: [
 			{
-				theme: "success",
+				theme: "primary",
 				href: "/accept",
-				label: "Accept"
+				label: "Lorem"
 			},
 			{
-				theme: "danger",
+				theme: "success",
 				href: "/deny",
-				label: "Deny"
+				label: "Lorem"
 			}
 		]
 	},
 	{
 		link:"http://www.bing.com",
-		label: "Bing",
+		title: "Bing",
+		description: "An ok search engine",
 		buttons: [
 			{
-				theme: "danger",
+				theme: "primary",
 				href: "/deny",
-				label: "Deny",
-				size: "large"
+				label: "Lorem"
 			}
 		]
 	},
 	{
 		link:"http://www.ask.com",
-		label: "Ask",
+		title: "Ask",
+		description: "Non-existent",
 		buttons: [
 			{
-				theme: "info",
+				theme: "secondary",
 				href: "/view",
-				label: "View"
+				label: "Lorem"
 			}
 		]
 	}

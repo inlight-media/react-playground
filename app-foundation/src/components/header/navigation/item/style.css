@@ -20,10 +20,7 @@
 	}
 }
 
-
 .active {
-	.anchor {
-		box-shadow: inset 0px -1px 0px 0px $navTextHighlight;
-		color: $navTextHighlight;
-	}
+	box-shadow: inset 0px -1px 0px 0px $navTextHighlight;
+	color: $navTextHighlight;
 }

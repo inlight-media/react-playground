@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import classNames from 'classnames';
 import styles from './style.css';
 
@@ -23,7 +24,7 @@ function render() {
 
 	return (
 		<li className={ classes }>
-			<a href={ this.props.link } onClick={ this.handleClick } className={ styles.anchor }>{ this.props.children }</a>
+			<Link to={ this.props.link } activeClassName={ styles.active } className={ styles.anchor }>{ this.props.children }</Link>
 		</li>
 	);
 }

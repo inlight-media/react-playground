@@ -4,16 +4,12 @@ import Item from './item';
 
 var items = [
 	{
-		link:"http://www.google.com",
-		label: "Google"
+		link:"/locations",
+		label: "Locations"
 	},
 	{
-		link:"http://www.bing.com",
-		label: "Bing"
-	},
-	{
-		link:"http://www.ask.com",
-		label: "Ask"
+		link:"/zones",
+		label: "Zones"
 	}
 ];
 

@@ -1,0 +1,12 @@
+@import url('//cloud.typography.com/7908472/622906/css/fonts.css');
+
+body {
+	font-family: 'Gotham SSm A', 'Gotham SSm B';
+	color: $font;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.2;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+

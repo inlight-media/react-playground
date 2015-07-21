@@ -6,6 +6,9 @@
  * define things such as a global line-height here
  */
 
+@import url('./reset.css');
+@import url('./typography.css');
+
 $brandColor: $blue;
 
 .app {

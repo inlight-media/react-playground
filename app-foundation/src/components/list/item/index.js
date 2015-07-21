@@ -8,7 +8,7 @@ export default class Item extends Component {
 		var item = this.props.meta;
 		return (
 			<li className={ styles.item } role="banner">
-				<Icon className={ styles.icon } />
+				<Icon className={ styles.icon } theme={ item.icon } />
 				<h4 className={ styles.title }>{ item.title }</h4>
 				<p className={ styles.description }>{ item.description }</p>
 				<ButtonSet buttons={ item.buttons } className={ styles.buttonSet } />

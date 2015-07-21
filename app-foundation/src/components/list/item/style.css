@@ -32,10 +32,8 @@
 .icon {
 	float: left;
 	margin-right: 15px;
-	/* Temp */
-	background: $greyLight;
-	width: 40px;
-	height: 40px;
+	font-size: 40px;
+	color: $fontLighter;
 }
 
 .buttonSet {

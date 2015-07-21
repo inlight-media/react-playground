@@ -45,6 +45,14 @@ module.exports = {
 				include: path.join(__dirname, 'src'),
 				test: /\.js$/,
 				loader: 'react-hot!babel'
+			},
+			{
+				test: /\.(png|jpg)$/,
+				loader: 'file-loader?name=img/[name].[ext]'
+			},
+			{
+				test: /\.(eot|svg|ttf|woff)$/,
+				loader: 'file-loader?name=font/[name].[ext]'
 			}
 		]
 	},

@@ -1,6 +1,80 @@
+@font-face {
+	font-family: 'Icomoon';
+	src: url("./font/icomoon.eot");
+	src: url("./font/icomoon.eot?#iefix") format("embedded-opentype"),
+		url("./font/icomoon.woff") format("woff"),
+		url("./font/icomoon.ttf") format("truetype"),
+		url("./font/icomoon.svg#Icomoon") format("svg");
+}
+
 .icon {
-	font-size: 24px;
-	color: $fontLighter;
+	display: inline-block;
+	font-family: 'Icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Individual Icons */
+
+.calendar:before {
+	content: "\e615";
+}
+
+.star:before {
+	content: "\e612";
+}
+
+.clock:before {
+	content: "\e60f";
+}
+
+.live:before {
+	content: "\e610";
+}
+
+.tick:before {
+	content: "\e611";
+}
+
+.beacon:before {
+	content: "\e600";
+}
+
+.beacon-light:before {
+	content: "\e603";
+}
+
+.help:before {
+	content: "\e601";
+}
+
+.arrow-down:before {
+	content: "\e602";
+}
+
+.close:before {
+	content: "\e604";
+}
+
+.add-marker:before {
+	content: "\e605";
+}
+
+.house:before {
+	content: "\e606";
+}
+
+/* States */
+
+.right {
+	margin-left: 5px;
 }
 
 .positive {

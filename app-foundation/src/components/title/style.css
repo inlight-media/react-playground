@@ -1,0 +1,10 @@
+.title {
+	margin: 20px 0;
+	font-size: 48px;
+}
+
+/* How can we pass this down when we don't know the children
+ using this.props.children from another file */
+.button {
+	float: right;
+}

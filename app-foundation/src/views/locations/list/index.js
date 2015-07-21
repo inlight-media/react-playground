@@ -13,7 +13,7 @@ export default class LocationList extends Component {
 		return (
 			<div className={ styles.container }>
 				<Title label="Locations">
-					<Button theme="primary">Test</Button>
+					<Button href="/locations/new" theme="primary">New Branch</Button>
 				</Title>
 				<List items={ items } />
 			</div>

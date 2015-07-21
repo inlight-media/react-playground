@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import styles from './style.css';
+import { Link } from 'react-router';
 
 export default class Button extends Component {
 	render() {
@@ -12,9 +13,9 @@ export default class Button extends Component {
 		);
 
 		return (
-			<a href={ this.props.href } className={ classes } onClick={ this.props.handler } role="button">
-				{this.props.children}
-			</a>
+			<Link to={ this.props.href } className={ classes }>
+				{ this.props.children }
+			</Link>
 		);
 	}
 };

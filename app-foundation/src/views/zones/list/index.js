@@ -14,7 +14,7 @@ export default class ZoneList extends Component {
 		return (
 			<div className={ styles.container }>
 				<Title label="Zones">
-					<Button theme="primary">New Zone</Button>
+					<Button href="/zones/new" theme="primary">New Zone</Button>
 				</Title>
 				<Filter dropdowns={ data.dropdowns } dropdownClass={ styles.dropdown }/>
 				<List items={ data.items } />

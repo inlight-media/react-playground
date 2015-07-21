@@ -4,36 +4,17 @@ import classNames from 'classnames';
 import styles from './style.css';
 
 export default class Item extends Component {
+	render() {
+		var classes = classNames(
+			styles.item
+		);
 
-	constructor() {
-		super();
-		this.state = {
-			isActive: false
-		};
-
-		this.render = render
-		this.handleClick = handleClick.bind(this);
+		return (
+			<li className={ classes }>
+				<Link to={ this.props.link } activeClassName={ styles.active } className={ styles.anchor }>{ this.props.children }</Link>
+			</li>
+		);
 	}
 };
 
-function render() {
-	var classes = classNames(
-		styles.item,
-		this.state.isActive ? styles.active : ''
-	);
-
-	return (
-		<li className={ classes }>
-			<Link to={ this.props.link } activeClassName={ styles.active } className={ styles.anchor }>{ this.props.children }</Link>
-		</li>
-	);
-}
-
-function handleClick() {
-	event.preventDefault();
-
-	this.setState({
-		isActive: true
-	});
-}
 

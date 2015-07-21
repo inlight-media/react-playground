@@ -5,7 +5,7 @@ import { history } from 'react-router/lib/HashHistory';
 // Components
 import App from './app'
 import NotFound from 'not-found'
-import Zones from 'zones';
+import ZonesList from 'zones/list';
 import LocationsList from 'locations/list';
 import LocationsNew from 'locations/new';
 
@@ -20,7 +20,7 @@ React.render((
 			</Route>
 
 			// Zones
-			<Route path="zones" component={ Zones } />
+			<Route path="zones" component={ ZonesList } />
 
 			<Route path="*" component={ NotFound } />
 		</Route>

@@ -13,7 +13,7 @@ export default class Dropdown extends Component {
 	buildOptions(options) {
 		return options.map(function(option) {
 			return (
-				<option value={ option.value } key={ option.slug }> { option.label }</option>
+				<option value={ option.value } key={ option.value }> { option.label }</option>
 			);
 		});
 	}

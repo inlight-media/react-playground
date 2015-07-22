@@ -1,0 +1,4 @@
+.line {
+	clear: both;
+	border-bottom: 1px solid $greyVeryLight;
+}

@@ -24,7 +24,7 @@ export default class LocationNew extends Component {
 			<div className={ styles.container }>
 				<Notice title="Branches" description="Before you get started you'll need to setup one or more locations. Examples of locations include branches, shops, venues, galleries, events, stadiums or workplaces." />
 				<Wrapper>
-					<Title label="Locations » New Branch" />
+					<Title label="Locations » New Branch" className={ styles.title } line />
 					<ButtonSet buttons={ buttons } />
 				</Wrapper>
 			</div>

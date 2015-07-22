@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import styles from './style.css';
 
+import Line from 'line';
+
 export default class Title extends Component {
 	render() {
 		var classes = classNames(
@@ -9,10 +11,18 @@ export default class Title extends Component {
 			this.props.className ? this.props.className : ''
 		);
 
+		var optionalLine;
+		if (this.props.line) {
+			optionalLine = (<Line />);
+		}
+
 		return (
-			<div className={ classes }>
-				<h1>{ this.props.label }</h1>
-				{ this.props.children }
+			<div>
+				<div className={ classes }>
+					<h1>{ this.props.label }</h1>
+					{ this.props.children }
+				</div>
+				{ optionalLine }
 			</div>
 		);
 	}

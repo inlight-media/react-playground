@@ -24,7 +24,7 @@ export default class ZoneNew extends Component {
 			<div className={ styles.container }>
 				<Notice title="Zones" description="Now that you've setup up a location you'll need to add one or more zones before you can trigger proximity campaigns. Think of zones as areas within each of your locations." />
 				<Wrapper>
-					<Title label="Zones » New Branch" />
+					<Title label="Zones » New Branch" line />
 					<ButtonSet buttons={ buttons } />
 				</Wrapper>
 			</div>

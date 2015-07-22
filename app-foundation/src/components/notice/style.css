@@ -1,0 +1,47 @@
+.notice {
+	padding: 30px 0;
+	background: $helpBackground;
+}
+
+.title {
+	font-size: 24px;
+	font-weight: 300;
+	margin-bottom: 20px;
+	color: $helpTitle;
+	max-width: $screenSm;
+}
+
+.paragraph {
+	font-size: 14px;
+	font-weight: 300;
+	margin-bottom: 1em;
+	color: $helpText;
+	max-width: $screenSm;
+}
+
+.helpIcon {
+	font-size: 32px;
+	margin-right: 10px;
+	color: $helpText;
+	vertical-align: middle;
+}
+
+.close {
+	float: right;
+	font-size: 24px;
+	color: $helpTitle;
+}
+
+.list {
+	li {
+		display: inline-block;
+		margin-right: 20px;
+
+		a {
+			text-decoration: underline;
+			color: $helpTitle;
+			font-size: 14px;
+			font-weight: 300;
+		}
+	}
+}

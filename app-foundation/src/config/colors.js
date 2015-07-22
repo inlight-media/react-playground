@@ -29,7 +29,7 @@ module.exports = {
 	font: '#222',
 	fontMedium: '#444',
 	fontLight: '#666',
-	fontLighter: '#999',
+	fontLighter: '#999'
 };
 
 

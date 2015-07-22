@@ -1,6 +1,6 @@
 import React from 'react';
 import { Router, Route } from 'react-router';
-import { history } from 'react-router/lib/BrowserHistory';
+import { history } from 'react-router/lib/HashHistory';
 
 // Components
 import App from './app'

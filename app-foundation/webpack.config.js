@@ -62,8 +62,9 @@ module.exports = {
 				var colors = require('./src/config/colors');
 				var theme = require('./src/config/theme');
 				var nav = require('./src/config/nav');
+				var layout = require('./src/config/layout');
 
-				return _.assign(colors, theme, nav);
+				return _.assign(colors, theme, nav, layout);
 			}
 		}),
 		nested(),

@@ -1,0 +1,6 @@
+.wrapper {
+	max-width: $wrapperWidth;
+	margin: 0 auto;
+	padding-left: $gridGutter;
+	padding-right: $gridGutter;
+}

@@ -4,7 +4,7 @@ import styles from './style.css';
 
 export default class Form extends Component {
 	render() {
-		var classes = classNames(
+		const classes = classNames(
 			styles.form,
 			this.props.className ? this.props.className : ''
 		);

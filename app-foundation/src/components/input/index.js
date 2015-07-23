@@ -4,7 +4,7 @@ import styles from './style.css';
 
 export default class Input extends Component {
 	render() {
-		var classes = classNames(
+		const classes = classNames(
 			styles.input,
 			this.props.className ? this.props.className : ''
 		);

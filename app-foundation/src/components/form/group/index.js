@@ -4,12 +4,12 @@ import styles from './style.css';
 
 export default class FormGroup extends Component {
 	render() {
-		var classes = classNames(
+		const classes = classNames(
 			styles.formGroup,
 			this.props.className ? this.props.className : ''
 		);
 
-		var title;
+		let title;
 		if (this.props.title) {
 			title = (<h2 className={ styles.title }>{ this.props.title }</h2>);
 		}

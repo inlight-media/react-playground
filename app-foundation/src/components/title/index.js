@@ -6,12 +6,12 @@ import Line from 'line';
 
 export default class Title extends Component {
 	render() {
-		var classes = classNames(
+		const classes = classNames(
 			styles.title,
 			this.props.className ? this.props.className : ''
 		);
 
-		var optionalLine;
+		let optionalLine;
 		if (this.props.line) {
 			optionalLine = (<Line />);
 		}

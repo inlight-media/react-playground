@@ -4,12 +4,12 @@ import styles from './style.css';
 
 export default class Tooltip extends Component {
 	render() {
-		var classes = classNames(
+		const classes = classNames(
 			styles.container,
 			this.props.className ? this.props.className : ''
 		);
 
-		var tooltipClasses = classNames(
+		const tooltipClasses = classNames(
 			styles.tooltip,
 			this.props.position ? styles[this.props.position] : ''
 		);

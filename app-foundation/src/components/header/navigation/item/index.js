@@ -5,7 +5,7 @@ import styles from './style.css';
 
 export default class Item extends Component {
 	render() {
-		var classes = classNames(
+		const classes = classNames(
 			styles.item
 		);
 

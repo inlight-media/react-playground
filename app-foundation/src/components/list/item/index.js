@@ -5,7 +5,7 @@ import Icon from 'icon';
 
 export default class Item extends Component {
 	render() {
-		var item = this.props.meta;
+		const item = this.props.meta;
 		return (
 			<li className={ styles.item } role="banner">
 				<div className={ styles.body }>

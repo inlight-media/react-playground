@@ -13,7 +13,7 @@ export default class ButtonSet extends Component {
 	}
 
 	render() {
-		var classes = classNames(
+		const classes = classNames(
 			styles.container,
 			this.props.className ? this.props.className : ''
 		);

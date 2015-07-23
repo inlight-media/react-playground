@@ -14,7 +14,7 @@ export default class Filter extends Component {
 	}
 
 	render() {
-		var classes = classNames(
+		const classes = classNames(
 			styles.container,
 			this.props.className ? this.props.className : ''
 		);

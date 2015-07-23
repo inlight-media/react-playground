@@ -7,12 +7,12 @@ import Icon from 'icon';
 
 export default class Line extends Component {
 	render() {
-		var classes = classNames(
+		const classes = classNames(
 			styles.group,
 			this.props.className ? this.props.className : ''
 		);
 
-		var tooltip;
+		let tooltip;
 		if (this.props.tooltip) {
 			tooltip = (
 				<Tooltip className={ styles.help } position="left" text={ this.props.tooltip }>

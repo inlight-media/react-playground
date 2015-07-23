@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styles from './style.css';
 import Item from './item';
 
-var items = [
+const items = [
 	{
 		link:"/locations",
 		label: "Locations"

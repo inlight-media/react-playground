@@ -4,7 +4,7 @@ import styles from './style.css';
 
 export default class Line extends Component {
 	render() {
-		var classes = classNames(
+		const classes = classNames(
 			styles.line,
 			this.props.className ? this.props.className : ''
 		);

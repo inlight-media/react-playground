@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 
 export default class Button extends Component {
 	render() {
-		var classes = classNames(
+		const classes = classNames(
 			styles.button,
 			this.props.theme ? styles[this.props.theme] : '',
 			this.props.size ? styles[this.props.size] : '',

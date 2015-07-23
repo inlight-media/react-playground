@@ -15,7 +15,8 @@ export default class ButtonSet extends Component {
 	render() {
 		var classes = classNames(
 			styles.container,
-			this.props.className ? this.props.className : ''
+			this.props.className ? this.props.className : '',
+			this.props.final ? styles.final : ''
 		);
 
 		return (

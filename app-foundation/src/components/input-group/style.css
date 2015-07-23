@@ -1,0 +1,38 @@
+.group {
+	position: relative;
+	display: block;
+	max-width: $screenSm;
+	clear: both;
+	margin-bottom: 20px;
+}
+
+.label {
+	float: left;
+	width: 160px;
+	font-size: 16px;
+	color: $fontMedium;
+	line-height: 48px;
+	font-weight: 300;
+}
+
+.fields {
+	position: relative;
+	display: inline-block;
+	width: $screenSm - 260;
+	vertical-align: middle;
+}
+
+.help {
+	position: absolute;
+	top: 12px;
+	right: 0;
+	color: $greyLight;
+
+	&:hover {
+		color: $fontLighter;
+	}
+}
+
+.icon {
+	font-size: 28px;
+}

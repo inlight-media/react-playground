@@ -1,0 +1,60 @@
+$tooltipArrowWidth: 5px;
+
+.container {
+	&:hover {
+		.tooltip {
+			display: block;
+		}
+	}
+}
+
+.tooltip {
+	position: absolute;
+	z-index: 100;
+	display: none;
+	visibility: visible;
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 1.4;
+	padding: 5px 15px;
+	text-align: center;
+	text-decoration: none;
+	background-color: $primary;
+	color: $white;
+	border-radius: 3px;
+	min-width: 180px;
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-color: transparent;
+		border-style: solid;
+		top: 50%;
+		margin-top: -$tooltipArrowWidth;
+	}
+}
+
+
+/* States */
+.right {
+	left: 100%;
+	margin-left: 15px;
+	&:after {
+		right: 100%;
+		border-width: $tooltipArrowWidth $tooltipArrowWidth $tooltipArrowWidth 0;
+		border-right-color: $primary;
+	}
+}
+
+.left {
+	margin-right: 15px;
+	right: 100%;
+	&:after {
+		left: 100%;
+		margin-right: -($tooltipArrowWidth);
+		border-width: $tooltipArrowWidth 0 $tooltipArrowWidth $tooltipArrowWidth;
+		border-left-color: $primary;
+	}
+}

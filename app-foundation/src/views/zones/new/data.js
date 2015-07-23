@@ -3,6 +3,7 @@ module.exports = {
 	buttons: [
 		{
 			href: "#",
+			theme: "secondary",
 			label: "Cancel"
 		},
 		{

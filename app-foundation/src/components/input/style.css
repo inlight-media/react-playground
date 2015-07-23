@@ -1,0 +1,16 @@
+.input {
+	font-size: 16px;
+	font-weight: 300;
+	color: $fontMedium;
+	width: 100%;
+	padding: 14px;
+	border: 1px solid $greyVeryLight;
+	border-radius: 3px;
+	outline: none;
+	transition: 0.3s;
+
+	&:focus {
+		border: 1px solid $greyLight;
+	}
+}
+

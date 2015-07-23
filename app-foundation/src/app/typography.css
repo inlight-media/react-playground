@@ -6,7 +6,8 @@ body {
 	font-size: 16px;
 	font-weight: 300;
 	line-height: 1.2;
-	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 }
 

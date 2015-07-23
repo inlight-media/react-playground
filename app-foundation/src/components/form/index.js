@@ -1,18 +1,9 @@
-import React, { Component } from 'react';
-import classNames from 'classnames';
-import styles from './style.css';
+import Form from './form'
+import FormGroup from './group'
+import FormFooter from './footer'
 
-export default class Form extends Component {
-	render() {
-		var classes = classNames(
-			styles.form,
-			this.props.className ? this.props.className : ''
-		);
-
-		return (
-			<form className={ classes } action={ this.props.action }>
-				{ this.props.children }
-			</form>
-		);
-	}
-};
+export default {
+	Form,
+	FormGroup,
+	FormFooter
+}

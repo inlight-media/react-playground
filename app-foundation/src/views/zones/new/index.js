@@ -8,8 +8,7 @@ import InputGroup from 'input-group';
 import Dropdown from 'dropdown';
 import Line from 'line';
 import Input from 'input';
-import Form from 'form';
-import FormGroup from 'form-group';
+import { Form, FormGroup, FormFooter } from 'form';
 import Wrapper from 'wrapper';
 
 // Temp data
@@ -59,7 +58,9 @@ export default class ZoneNew extends Component {
 
 						<Line />
 
-						<ButtonSet buttons={ data.buttons } final />
+						<FormFooter>
+							<ButtonSet buttons={ data.buttons } />
+						</FormFooter>
 					</Form>
 				</Wrapper>
 			</div>

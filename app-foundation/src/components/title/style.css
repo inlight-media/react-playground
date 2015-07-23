@@ -9,3 +9,7 @@
 .button {
 	float: right;
 }
+
+.text {
+	composes: h1 from "../../shared/typography.css";
+}

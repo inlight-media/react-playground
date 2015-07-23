@@ -19,7 +19,7 @@ export default class Title extends Component {
 		return (
 			<div>
 				<div className={ classes }>
-					<h1>{ this.props.label }</h1>
+					<h1 className={ styles.text }>{ this.props.label }</h1>
 					{ this.props.children }
 				</div>
 				{ optionalLine }

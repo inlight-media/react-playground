@@ -6,24 +6,21 @@ import { history } from 'react-router/lib/HashHistory';
 import App from './app'
 import NotFound from 'not-found'
 
-import LocationsList from 'locations/list';
-import LocationsNew from 'locations/new';
-
-import ZonesList from 'zones/list';
-import ZonesNew from 'zones/new';
+import { LocationList, LocationNew } from 'locations';
+import { ZoneList, ZoneNew } from 'zones';
 
 React.render((
 	<Router history={ history }>
 		<Route path="/" component={ App }>
 
 			// Locations - @TODO: Indent this.
-			<Route path="locations" component={ LocationsList } />
-			<Route path="locations/list" component={ LocationsList } />
-			<Route path="locations/new" component={ LocationsNew } />
+			<Route path="locations" component={ LocationList } />
+			<Route path="locations/list" component={ LocationList } />
+			<Route path="locations/new" component={ LocationNew } />
 
 			// Zones
-			<Route path="zones" component={ ZonesList } />
-			<Route path="zones/new" component={ ZonesNew } />
+			<Route path="zones" component={ ZoneList } />
+			<Route path="zones/new" component={ ZoneNew } />
 
 			<Route path="*" component={ NotFound } />
 		</Route>

@@ -6,8 +6,8 @@ import { history } from 'react-router/lib/HashHistory';
 import App from './app'
 import NotFound from 'not-found'
 
-import { LocationList, LocationNew } from 'locations';
-import { ZoneList, ZoneNew } from 'zones';
+import { LocationList, LocationNew } from 'location';
+import { ZoneList, ZoneNew } from 'zone';
 
 React.render((
 	<Router history={ history }>

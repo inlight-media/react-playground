@@ -18,12 +18,12 @@ export default class Notice extends Component {
 						<Icon theme="help" className={ styles.helpIcon } /> { this.props.title }
 					</h2>
 					<p className={ styles.paragraph }>{ this.props.description }</p>
-					<ul className={ styles.list }>
-						<li>
-							<a href="#">Hide</a>
+					<ul>
+						<li className={ styles.listItem }>
+							<a href="#" className={ styles.listAnchor }>Hide</a>
 						</li>
-						<li>
-							<a href="#">Don't show this again</a>
+						<li className={ styles.listItem }>
+							<a href="#" className={ styles.listAnchor }>Don't show this again</a>
 						</li>
 					</ul>
 				</Wrapper>

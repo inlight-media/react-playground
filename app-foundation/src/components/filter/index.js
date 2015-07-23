@@ -8,14 +8,14 @@ export default class Filter extends Component {
 		return dropdowns.map(function(dropdown) {
 			// @TODO: Add className={ this.props.dropdownClass } here. Need to reference correct *this*
 			return (
-				<Dropdown options={ dropdown.items }></Dropdown>
+				<Dropdown options={ dropdown.items } className={ styles.dropdown }></Dropdown>
 			)
 		});
 	}
 
 	render() {
 		const classes = classNames(
-			styles.container,
+			styles.filter,
 			this.props.className ? this.props.className : ''
 		);
 

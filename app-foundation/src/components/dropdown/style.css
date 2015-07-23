@@ -1,4 +1,4 @@
-.container {
+.dropdown {
 	overflow: hidden;
 	background: white;
 	border: 1px solid $greyVeryLight;
@@ -9,6 +9,7 @@
 	width: 100%;
 	border-radius: 3px;
 	overflow: hidden;
+	position: relative;
 }
 
 .select {
@@ -54,7 +55,9 @@
 
 .icon {
 	position: absolute;
-	top: 19px;
+	top: 50%;
+	font-size: 16px;
+	margin-top: -8px;
 	right: 20px;
 	z-index: 1;
 }

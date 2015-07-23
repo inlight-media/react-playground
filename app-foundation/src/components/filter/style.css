@@ -4,23 +4,7 @@
 }
 
 .dropdown {
-	position: relative;
 	float: left;
 	border-right: 1px solid $greyLight;
-
-	&.full {
-		width: 100%;
-		border: 0 none;
-
-		a {
-			width: 100%;
-		}
-
-		.icon {
-			position: absolute;
-			top: 50%;
-			margin-top: -6px;
-			right: 20px;
-		}
-	}
+	width: auto;
 }

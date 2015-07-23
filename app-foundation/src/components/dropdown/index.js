@@ -27,8 +27,13 @@ export default class Dropdown extends Component {
 	}
 
 	render() {
+		const classes = classNames(
+			styles.dropdown,
+			this.props.className ? this.props.className : ''
+		);
+
 		return (
-			<div className={ styles.container }>
+			<div className={ classes }>
 				<select className={ styles.select } value={ this.state.value } onChange={ this.handleChange.bind(this) }>
 					{ this.buildOptions(this.props.options) }
 				</select>

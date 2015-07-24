@@ -33,7 +33,7 @@ export default class CampaignNew extends Component {
 							</InputGroup>
 
 							<InputGroup label="Template">
-								<Dropdown options={ data.states } />
+								<Dropdown options={ data.dropdown } />
 							</InputGroup>
 						</FormGroup>
 
@@ -45,11 +45,11 @@ export default class CampaignNew extends Component {
 							</InputGroup>
 
 							<InputGroup label="Trigger" tooltip="Lorem Ipsum">
-								<Dropdown options={ data.states } />
+								<Dropdown options={ data.dropdown } />
 							</InputGroup>
 
 							<InputGroup label="Limit" tooltip="Lorem Ipsum">
-								<Dropdown options={ data.states } />
+								<Dropdown options={ data.dropdown } />
 							</InputGroup>
 						</FormGroup>
 
@@ -57,17 +57,17 @@ export default class CampaignNew extends Component {
 
 						<FormGroup title="Scheduling">
 							<InputGroup label="Start Date">
-								<Dropdown options={ data.states } />
+								<Dropdown options={ data.dropdown } />
 							</InputGroup>
 						</FormGroup>
 
 						<FormGroup>
 							<InputGroup label="End Date">
-								<Dropdown options={ data.states } />
+								<Dropdown options={ data.dropdown } />
 							</InputGroup>
 
 							<InputGroup label="Time Zone" tooltip="Lorem Ipsum">
-								<Dropdown options={ data.states } />
+								<Dropdown options={ data.dropdown } />
 							</InputGroup>
 						</FormGroup>
 

@@ -12,33 +12,19 @@ module.exports = {
 		}
 	],
 
-	countries: [
+	dropdown: [
 		{
-			value: "united-kingdom",
-			label: "United Kingdom"
+			value: "lorem-ipsum",
+			label: "Lorem ipsum"
 		},
 		{
-			value: "australia",
-			label: "Australia"
+			value: "dolor-sit-amet",
+			label: "Dolor Sit Amet"
 		},
 		{
-			value: "new-zealand",
-			label: "New Zealand"
-		}
-	],
-
-	states: [
-		{
-			label: 'Victoria',
-			value: 'vic'
-		},
-		{
-			label: 'New South Wales',
-			value: 'nsw'
-		},
-		{
-			label: 'Queensland',
-			value: 'qld'
+			value: "consectetur-adipisicing",
+			label: "Consectetur Adipisicing"
 		}
 	]
 }
+

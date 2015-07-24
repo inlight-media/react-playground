@@ -10,6 +10,10 @@ const items = [
 	{
 		link:"/zones",
 		label: "Zones"
+	},
+	{
+		link:"/campaigns",
+		label: "Campaigns"
 	}
 ];
 

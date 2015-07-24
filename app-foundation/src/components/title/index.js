@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import styles from './style.css';
 
 import Line from 'line';
+import Button from 'button';
 
 export default class Title extends Component {
 	render() {
@@ -11,9 +12,14 @@ export default class Title extends Component {
 			this.props.className ? this.props.className : ''
 		);
 
-		let optionalLine;
+		let line;
+		let button;
 		if (this.props.line) {
-			optionalLine = (<Line />);
+			line = (<Line />);
+		}
+
+		if (this.props.button) {
+			button = (<Button href={ this.props.button.href } theme="primary" className={ styles.button }>{ this.props.button.label }</Button>);
 		}
 
 		return (
@@ -21,8 +27,9 @@ export default class Title extends Component {
 				<div className={ classes }>
 					<h1 className={ styles.text }>{ this.props.label }</h1>
 					{ this.props.children }
+					{ button }
 				</div>
-				{ optionalLine }
+				{ line }
 			</div>
 		);
 	}

@@ -11,12 +11,15 @@ import items from './data'
 
 export default class LocationList extends Component {
 	render() {
+		let button = {
+			href: "/locations/new",
+			label: "New Branch"
+		};
+
 		return (
 			<div className={ styles.container }>
 				<Wrapper>
-					<Title label="Locations">
-						<Button href="/locations/new" theme="primary">New Branch</Button>
-					</Title>
+					<Title label="Locations" button={ button } />
 					<List items={ items } />
 				</Wrapper>
 			</div>

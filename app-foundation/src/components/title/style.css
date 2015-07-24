@@ -4,12 +4,11 @@
 	margin-bottom: 10px;
 }
 
-/* How can we pass this down when we don't know the children
- using this.props.children from another file */
-.button {
-	float: right;
-}
-
 .text {
 	composes: h1 from "../../shared/typography.css";
+	float: left;
+}
+
+.button {
+	float: right;
 }

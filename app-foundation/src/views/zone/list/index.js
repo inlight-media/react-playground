@@ -12,12 +12,15 @@ import data from './data'
 
 export default class ZoneList extends Component {
 	render() {
+		let button = {
+			href: "/zones/new",
+			label: "New Zone"
+		};
+
 		return (
 			<div className={ styles.container }>
 				<Wrapper>
-					<Title label="Zones">
-						<Button href="/zones/new" theme="primary">New Zone</Button>
-					</Title>
+					<Title label="Zones" button={ button } />
 					<Filter dropdowns={ data.dropdowns } dropdownClass={ styles.dropdown }/>
 					<List items={ data.items } />
 				</Wrapper>

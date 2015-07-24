@@ -5,14 +5,13 @@
 	cursor: pointer;
 	transition: 0.3s;
 	composes: clearfix from "../../../shared/utils.css";
+	display: block;
 
 	&:hover {
 		background: $offWhite;
 
-		.buttonSet {
-			a {
-				background: $greyVeryLight;
-			}
+		.button {
+			background: $greyVeryLight;
 		}
 	}
 
@@ -37,7 +36,7 @@
 	color: $fontLighter;
 }
 
-.buttonSet {
+.button {
 	float: right;
 }
 

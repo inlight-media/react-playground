@@ -4,6 +4,7 @@ import Item from './item';
 
 export default class List extends Component {
 	buildItems(items) {
+
 		return items.map(function(item) {
 			return (
 				<Item meta={ item } />

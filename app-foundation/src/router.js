@@ -8,6 +8,7 @@ import NotFound from 'not-found'
 
 import { LocationList, LocationNew } from 'location';
 import { ZoneList, ZoneNew } from 'zone';
+import { CampaignList, CampaignNew } from 'campaign';
 
 React.render((
 	<Router history={ history }>
@@ -21,6 +22,10 @@ React.render((
 			// Zones
 			<Route path="zones" component={ ZoneList } />
 			<Route path="zones/new" component={ ZoneNew } />
+
+			// Campaigns
+			<Route path="campaigns" component={ CampaignList } />
+			<Route path="campaigns/new" component={ CampaignNew } />
 
 			<Route path="*" component={ NotFound } />
 		</Route>

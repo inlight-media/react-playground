@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import styles from './style.css';
-import ButtonSet from 'button-set';
+import Button from 'button';
 import Icon from 'icon';
 
 export default class Item extends Component {
 	render() {
 		const item = this.props.meta;
+
 		return (
-			<li className={ styles.item } role="banner">
+			<div href={ item.link } className={ styles.item } role="banner">
 				<Icon className={ styles.icon } theme={ item.icon } />
 				<div className={ styles.body }>
 					<h4 className={ styles.title }>{ item.title }</h4>
 					<p className={ styles.description }>{ item.description }</p>
 				</div>
-				<ButtonSet buttons={ item.buttons } className={ styles.buttonSet } />
-			</li>
+				<Button href={ item.link + "#edit" } theme="secondary" className={ styles.button }>Edit</Button>
+			</div>
 		);
 	}
 }

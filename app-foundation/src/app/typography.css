@@ -11,3 +11,13 @@ body {
 	text-rendering: optimizeLegibility;
 }
 
+a {
+	text-decoration: none;
+	outline: 0;
+	color: $greyDark;
+	transition: 0.3s;
+
+	&:hover {
+		text-decoration: none;
+	}
+}

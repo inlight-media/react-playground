@@ -5,9 +5,10 @@ import styles from './style.css';
 import List from 'list';
 import Title from 'title';
 import Button from 'button';
+import Filter from 'filter';
 import Wrapper from 'wrapper';
 
-import items from './data'
+import data from './data'
 
 export default class LocationList extends Component {
 	render() {
@@ -19,8 +20,9 @@ export default class LocationList extends Component {
 		return (
 			<div className={ styles.container }>
 				<Wrapper>
-					<Title label="Locations" button={ button } />
-					<List items={ items } />
+					<Title label="Branches" button={ button } />
+					<Filter dropdowns={ data.dropdowns } />
+					<List items={ data.items } />
 				</Wrapper>
 			</div>
 		);

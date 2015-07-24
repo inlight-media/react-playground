@@ -21,7 +21,7 @@ export default class ZoneList extends Component {
 			<div className={ styles.container }>
 				<Wrapper>
 					<Title label="Zones" button={ button } />
-					<Filter dropdowns={ data.dropdowns } dropdownClass={ styles.dropdown }/>
+					<Filter dropdowns={ data.dropdowns } />
 					<List items={ data.items } />
 				</Wrapper>
 			</div>

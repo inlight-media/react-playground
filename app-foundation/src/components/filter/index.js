@@ -6,7 +6,6 @@ import Dropdown from 'dropdown';
 export default class Filter extends Component {
 	buildDropdowns(dropdowns) {
 		return dropdowns.map(function(dropdown) {
-			// @TODO: Add className={ this.props.dropdownClass } here. Need to reference correct *this*
 			return (
 				<Dropdown options={ dropdown.items } className={ styles.dropdown }></Dropdown>
 			)

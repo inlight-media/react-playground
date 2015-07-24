@@ -6,5 +6,5 @@
 .dropdown {
 	float: left;
 	border-right: 1px solid $greyLight;
-	width: auto;
+	width: auto !important;
 }

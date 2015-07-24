@@ -4,6 +4,7 @@ import styles from './style.css';
 import Title from 'title';
 import Notice from 'notice';
 import ButtonSet from 'button-set';
+import Button from 'button';
 import InputGroup from 'input-group';
 import Dropdown from 'dropdown';
 import Line from 'line';
@@ -18,20 +19,20 @@ export default class CampaignNew extends Component {
 	render() {
 		return (
 			<div className={ styles.container }>
-				<Notice title="Branches" description="Before you get started you'll need to setup one or more locations. Examples of locations include branches, shops, venues, galleries, events, stadiums or workplaces." />
+				<Notice title="Campaigns" description="You're now ready to create your first campaign. A campaign handles the delivery of your content to a users device when they come within range of a beacon." />
 				<Wrapper>
-					<Title label="Locations » New Branch" className={ styles.title } line />
+					<Title label="Campaigns » New Campaign" className={ styles.title } line />
 					<Form>
 						<FormGroup>
-							<InputGroup label="Branch Name">
+							<InputGroup label="Title">
 								<Input />
 							</InputGroup>
 
-							<InputGroup label="Country">
-								<Dropdown options={ data.countries } />
+							<InputGroup label="Notification">
+								<Input />
 							</InputGroup>
 
-							<InputGroup label="State">
+							<InputGroup label="Template">
 								<Dropdown options={ data.states } />
 							</InputGroup>
 						</FormGroup>
@@ -39,17 +40,39 @@ export default class CampaignNew extends Component {
 						<Line />
 
 						<FormGroup>
-							<InputGroup label="Street Address">
+							<InputGroup label="Description">
 								<Input />
 							</InputGroup>
 
-							<InputGroup label="City">
-								<Input />
+							<InputGroup label="Trigger" tooltip="Lorem Ipsum">
+								<Dropdown options={ data.states } />
 							</InputGroup>
 
-							<InputGroup label="Post Code">
-								<Input />
+							<InputGroup label="Limit" tooltip="Lorem Ipsum">
+								<Dropdown options={ data.states } />
 							</InputGroup>
+						</FormGroup>
+
+						<Line />
+
+						<FormGroup title="Scheduling">
+							<InputGroup label="Start Date">
+								<Dropdown options={ data.states } />
+							</InputGroup>
+						</FormGroup>
+
+						<FormGroup>
+							<InputGroup label="End Date">
+								<Dropdown options={ data.states } />
+							</InputGroup>
+
+							<InputGroup label="Time Zone" tooltip="Lorem Ipsum">
+								<Dropdown options={ data.states } />
+							</InputGroup>
+						</FormGroup>
+
+						<FormGroup title="Activation Zones">
+							<Button href="#" theme="primary">Add Zones</Button>
 						</FormGroup>
 
 						<Line />

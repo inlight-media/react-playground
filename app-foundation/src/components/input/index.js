@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import styles from './style.css';
 
-export default class Input extends Component {
+export default class extends Component {
 	render() {
 		const classes = classNames(
 			styles.input,

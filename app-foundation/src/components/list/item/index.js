@@ -3,7 +3,7 @@ import styles from './style.css';
 import Button from 'button';
 import Icon from 'icon';
 
-export default class Item extends Component {
+export default class extends Component {
 	render() {
 		const item = this.props.meta;
 

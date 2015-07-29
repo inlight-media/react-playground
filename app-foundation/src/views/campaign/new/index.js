@@ -15,7 +15,7 @@ import Wrapper from 'wrapper';
 // Temp data
 import data from './data';
 
-export default class CampaignNew extends Component {
+export default class extends Component {
 	render() {
 		return (
 			<div className={ styles.container }>

@@ -5,7 +5,7 @@ import styles from './style.css';
 import Line from 'line';
 import Button from 'button';
 
-export default class Title extends Component {
+export default class extends Component {
 	render() {
 		const classes = classNames(
 			styles.title,

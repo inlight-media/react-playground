@@ -10,7 +10,7 @@ import Wrapper from 'wrapper';
 
 import data from './data'
 
-export default class ZoneList extends Component {
+export default class extends Component {
 	render() {
 		let button = {
 			href: "/zones/new",

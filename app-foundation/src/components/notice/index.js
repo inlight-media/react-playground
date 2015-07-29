@@ -5,7 +5,7 @@ import styles from './style.css';
 import Icon from 'icon';
 import Wrapper from 'wrapper';
 
-export default class Notice extends Component {
+export default class extends Component {
 	render() {
 		return (
 			<div className={ styles.notice }>

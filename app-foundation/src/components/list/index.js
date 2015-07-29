@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styles from './style.css';
 import Item from './item';
 
-export default class List extends Component {
+export default class extends Component {
 	buildItems(items) {
 
 		return items.map(function(item) {

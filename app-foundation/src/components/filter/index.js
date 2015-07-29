@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import styles from './style.css';
 import Dropdown from 'dropdown';
 
-export default class Filter extends Component {
+export default class extends Component {
 	buildDropdowns(dropdowns) {
 		return dropdowns.map(function(dropdown) {
 			return (

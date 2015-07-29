@@ -17,7 +17,7 @@ const items = [
 	}
 ];
 
-export default class Navigation extends Component {
+export default class extends Component {
 	buildItems(items) {
 		return items.map(item => ( <Item link={ item.link }>{ item.label }</Item> ));
 	}

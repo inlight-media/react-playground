@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import styles from './style.css';
 import Button from 'button';
 
-export default class ButtonSet extends Component {
+export default class extends Component {
 	buildButtons(buttons) {
 		return buttons.map(function(button) {
 			return (

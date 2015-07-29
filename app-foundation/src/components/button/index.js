@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import styles from './style.css';
 import { Link } from 'react-router';
 
-export default class Button extends Component {
+export default class extends Component {
 	render() {
 		const classes = classNames(
 			styles.button,

@@ -3,7 +3,7 @@ import styles from './style.css';
 import Logo from './logo';
 import Navigation from './navigation';
 
-export default class Header extends Component {
+export default class extends Component {
 	render() {
 		return (
 			<header className={ styles.container } role="banner">

@@ -5,7 +5,7 @@ import styles from './style.css';
 import Tooltip from 'tooltip';
 import Icon from 'icon';
 
-export default class Line extends Component {
+export default class extends Component {
 	render() {
 		const classes = classNames(
 			styles.group,

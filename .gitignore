@@ -1,2 +1,14 @@
 node_modules
 dist
+
+
+# iOS Xcode files
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcworkspace
+xcuserdata
+*.xcodeproj/ !*.xcodeproj/project.pbxproj

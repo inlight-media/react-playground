@@ -7,9 +7,9 @@ export default class extends Component {
 	render() {
 		const classes = classNames(
 			styles.button,
-			this.props.theme ? styles[this.props.theme] : '',
-			this.props.size ? styles[this.props.size] : '',
-			this.props.className ? this.props.className : ''
+			styles[this.props.theme],
+			styles[this.props.size],
+			this.props.className
 		);
 
 		return (

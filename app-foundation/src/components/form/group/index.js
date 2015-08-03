@@ -6,7 +6,7 @@ export default class extends Component {
 	render() {
 		const classes = classNames(
 			styles.formGroup,
-			this.props.className ? this.props.className : ''
+			this.props.className
 		);
 
 		let title;

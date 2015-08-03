@@ -6,8 +6,8 @@ export default class extends Component {
 	render() {
 		const classes = classNames(
 			styles.icon,
-			this.props.className ? this.props.className : '',
-			this.props.theme ? styles[this.props.theme] : ''
+			this.props.className,
+			styles[this.props.theme]
 		);
 
 		return (

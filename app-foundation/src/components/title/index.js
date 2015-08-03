@@ -9,7 +9,7 @@ export default class extends Component {
 	render() {
 		const classes = classNames(
 			styles.title,
-			this.props.className ? this.props.className : ''
+			this.props.className
 		);
 
 		let line;

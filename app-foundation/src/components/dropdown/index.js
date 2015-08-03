@@ -29,7 +29,7 @@ export default class extends Component {
 	render() {
 		const classes = classNames(
 			styles.dropdown,
-			this.props.className ? this.props.className : ''
+			this.props.className
 		);
 
 		return (

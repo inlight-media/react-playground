@@ -9,7 +9,7 @@ export default class extends Component {
 	render() {
 		const classes = classNames(
 			styles.group,
-			this.props.className ? this.props.className : ''
+			this.props.className
 		);
 
 		let tooltip;
